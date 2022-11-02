@@ -94,7 +94,7 @@ header .icons #menu-bars{
 
 #search-form{
     position: fixed;
-    top: 0;
+    top: -110%;
     left: 0;
     height: 100%;
     width: 100%;
@@ -104,6 +104,10 @@ header .icons #menu-bars{
     align-items: center;
     justify-content: center;
     padding: 0 1rem;
+}
+
+#search-form.active{
+    top: 0;
 }
 
 #search-form #search-box{
@@ -120,6 +124,30 @@ header .icons #menu-bars{
 
 #search-form #search-box::placeholder{
     color: #eee;
+}
+
+
+#search-form #search-box::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+}
+
+#search-form label{
+    color: #fff;
+    cursor: pointer;
+    font-size: 3rem;
+}
+
+#search-form label:hover{
+    color: var(--green);
+}
+
+#search-form #close{
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    color: #fff;
+    cursor: pointer;
+    font-size: 5rem;
 }
 /* media queries */
 
